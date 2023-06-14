@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: rms
-        image: digantagu/rms:4
+        image: digantagu/rms:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
