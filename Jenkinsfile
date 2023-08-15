@@ -19,7 +19,8 @@ node {
                         sh "cat deployment.yaml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
-                        //sh "git remote add origin https://github.com/digantagu/updatemanifest_rms.git"   git remote rm origin
+                        sh "git remote rm origin"
+                        sh "git remote add origin https://github.com/digantagu/updatemanifest_rms.git" 
                         sh "git push origin https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/updatemanifest_rms.git HEAD:main"                        
       }
     }
